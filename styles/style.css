@@ -14,8 +14,7 @@ body {
 .container{
     align-items: center;
     display: flex;
-    justify-content: space-around;
-    padding: 5% 15%;
+
 }
 
 .cabecalho{
@@ -24,22 +23,29 @@ body {
 
 .cabecalho__menu{
     display: flex;
-    gap: 80px;
+    gap: 3.5rem;
 }
 
 .cabecalho__link{
     color: #22d4df;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
 }
 
 .presentation{
-    width: 50%;
+    align-items: center;
+    display: flex;
+    padding: 5rem 8rem;
+    gap: 3.25rem;
+}
+
+.presentation__container{
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2rem;
+    width: 50%;
 }
 
 .presentation__titulo{
@@ -58,12 +64,12 @@ body {
     font-size: 1.5rem;
 }
 
-.presentation__links{   
+.presentation__links{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;
 }
 
 .links__botao{
@@ -75,8 +81,8 @@ body {
     font-weight: 600;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
     text-align: center;
     text-decoration: none;
     width: 50%;
@@ -87,10 +93,15 @@ body {
     scale: 1.1;
 }
 
+.botao:hover{
+    /* color: purple; */
+    scale: 1.1;
+}
+
 .foto-eu{
-    height: 350px;
-    width: 350px;
-    border-radius: 10px;
+    border-radius: .8rem;
+    width: 20rem;
+
 }
 
 .titulo-destaque {
@@ -100,10 +111,33 @@ body {
 .rodape{
     background-color: #22d4df;
     color: #000000;
-    padding: 24px;
+    padding: 1.5rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
 }
 
+@media (max-width: 1200px) {
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .presentation{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentation__container{
+        width: auto;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .foto-eu{
+        width: 15rem;
+    }
+
+}
